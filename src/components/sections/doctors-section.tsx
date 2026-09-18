@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Briefcase, Languages } from "lucide-react";
 import { doctors } from "@/lib/constants";
+import { asset } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { StaggerContainer, StaggerItem } from "@/animations/reveal";
@@ -28,7 +29,7 @@ export function DoctorsSection() {
               <div className="group overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <Image
-                    src={doctor.image}
+                    src={asset(doctor.image)}
                     alt={doctor.name}
                     fill
                     sizes="(max-width: 1024px) 100vw, 33vw"

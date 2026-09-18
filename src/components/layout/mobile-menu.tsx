@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { X, Phone, Calendar } from "lucide-react";
 import { hospital, navLinks } from "@/lib/constants";
+import { asset } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -35,7 +36,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
               <div className="mb-8 flex items-center justify-between">
                 <Link href="/" onClick={onClose}>
                   <Image
-                    src="/kify-logo.png"
+                    src={asset("/kify-logo.png")}
                     alt="Kify Hospital"
                     width={120}
                     height={48}

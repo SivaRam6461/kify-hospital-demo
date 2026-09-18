@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Briefcase, Languages } from "lucide-react";
 import { doctors } from "@/lib/constants";
+import { asset } from "@/lib/utils";
 import { PageHero } from "@/components/sections/page-hero";
 import { Button } from "@/components/ui/button";
 import { StaggerContainer, StaggerItem } from "@/animations/reveal";
@@ -19,7 +20,7 @@ export default function DoctorsPage() {
               <StaggerItem key={doctor.name}>
                 <div className="group overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-all hover:-translate-y-1 hover:shadow-card">
                   <div className="relative aspect-[4/5] overflow-hidden">
-                    <Image src={doctor.image} alt={doctor.name} fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <Image src={asset(doctor.image)} alt={doctor.name} fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/10 to-transparent" />
                     <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-primary backdrop-blur">{doctor.experience} Years Exp.</div>
                     <div className="absolute bottom-4 left-4 right-4">

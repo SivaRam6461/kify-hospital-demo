@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { asset } from "@/lib/utils";
 
 export function PageLoader() {
   const [isLoading, setIsLoading] = useState(true);
@@ -56,7 +57,7 @@ export function PageLoader() {
               className="mb-8 overflow-hidden rounded-3xl shadow-[0_0_60px_rgba(0,86,179,0.3)]"
             >
               <video
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo-animation.mp4`}
+                src={asset("/logo-animation.mp4")}
                 autoPlay
                 loop
                 muted

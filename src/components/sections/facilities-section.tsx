@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { facilities } from "@/lib/constants";
+import { asset } from "@/lib/utils";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { StaggerContainer, StaggerItem } from "@/animations/reveal";
 
@@ -21,7 +22,7 @@ export function FacilitiesSection() {
               <div className="group overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
-                    src={facility.image}
+                    src={asset(facility.image)}
                     alt={facility.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, ArrowRight, Star } from "lucide-react";
 import { hospital } from "@/lib/constants";
+import { asset } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/animations/reveal";
 
@@ -82,7 +83,7 @@ export function Hero() {
         <Reveal delay={0.2} className="relative mt-12 lg:mt-0">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] border border-white/40 shadow-card">
             <Image
-              src="/kifyhospital-frontview.png"
+              src={asset("/kifyhospital-frontview.png")}
               alt="Kify Hospital Building"
               fill
               sizes="(max-width: 1024px) 100vw, 45vw"

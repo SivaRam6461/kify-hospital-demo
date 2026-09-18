@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { facilities } from "@/lib/constants";
+import { asset } from "@/lib/utils";
 import { PageHero } from "@/components/sections/page-hero";
 import { StaggerContainer, StaggerItem } from "@/animations/reveal";
 
@@ -16,7 +17,7 @@ export default function FacilitiesPage() {
               <StaggerItem key={facility.name}>
                 <div className="group overflow-hidden rounded-3xl border border-border bg-card shadow-soft transition-all hover:-translate-y-1 hover:shadow-card">
                   <div className="relative aspect-[16/10] overflow-hidden">
-                    <Image src={facility.image} alt={facility.name} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <Image src={asset(facility.image)} alt={facility.name} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4">
                       <h3 className="text-lg font-semibold text-white">{facility.name}</h3>

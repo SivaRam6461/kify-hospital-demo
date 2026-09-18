@@ -3,15 +3,16 @@
 import Image from "next/image";
 import { Heart, ExternalLink } from "lucide-react";
 import { hospital } from "@/lib/constants";
+import { asset } from "@/lib/utils";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
 import { Reveal, StaggerContainer, StaggerItem } from "@/animations/reveal";
 
 const instaPosts = [
-  { src: "/insta-post-1.png", alt: "Instagram Post 1" },
-  { src: "/insta-post-2.png", alt: "Instagram Post 2" },
-  { src: "/insta-post-3.png", alt: "Instagram Post 3" },
-  { src: "/insta-post-4.png", alt: "Instagram Post 4" },
+  { src: asset("/insta-post-1.png"), alt: "Instagram Post 1" },
+  { src: asset("/insta-post-2.png"), alt: "Instagram Post 2" },
+  { src: asset("/insta-post-3.png"), alt: "Instagram Post 3" },
+  { src: asset("/insta-post-4.png"), alt: "Instagram Post 4" },
 ];
 
 function InstagramIcon({ className }: { className?: string }) {
@@ -157,7 +158,7 @@ export function SocialSection() {
             className="group relative block overflow-hidden rounded-2xl border border-border shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card"
           >
             <Image
-              src="/youtube-videos.png"
+              src={asset("/youtube-videos.png")}
               alt="YouTube Videos"
               width={1200}
               height={600}

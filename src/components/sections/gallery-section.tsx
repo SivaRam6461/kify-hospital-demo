@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { galleryImages } from "@/lib/constants";
+import { asset } from "@/lib/utils";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal, StaggerContainer, StaggerItem } from "@/animations/reveal";
 
@@ -20,7 +21,7 @@ export function GallerySection() {
             <StaggerItem key={image.src}>
               <div className="group relative overflow-hidden rounded-2xl border border-border shadow-soft break-inside-avoid">
                 <Image
-                  src={image.src}
+                  src={asset(image.src)}
                   alt={image.alt}
                   width={400}
                   height={300}

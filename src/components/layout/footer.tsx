@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, ArrowUp } from "lucide-react";
 import { hospital, navLinks, services, socialLinks } from "@/lib/constants";
+import { asset } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/animations/reveal";
 
@@ -25,7 +26,7 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-3 mb-4">
               <Image
-                src="/kify-logo.png"
+                src={asset("/kify-logo.png")}
                 alt="Kify Hospital"
                 width={140}
                 height={56}

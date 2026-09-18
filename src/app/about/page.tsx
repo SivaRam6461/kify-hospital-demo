@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Microscope, Users, HeartHandshake, Target, Eye, Award } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { asset } from "@/lib/utils";
 import { Reveal, StaggerContainer, StaggerItem } from "@/animations/reveal";
 
 const values = [
@@ -28,7 +29,7 @@ export default function AboutPage() {
           <div className="grid items-center gap-14 lg:grid-cols-2">
             <Reveal className="relative">
               <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-white/40 shadow-card">
-                <Image src="/kifyhospital-frontview.png" alt="Kify Hospital" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                <Image src={asset("/kifyhospital-frontview.png")} alt="Kify Hospital" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
               </div>
             </Reveal>
             <div>

@@ -5,6 +5,7 @@ import { Microscope, Users, HeartHandshake, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Reveal, StaggerContainer, StaggerItem } from "@/animations/reveal";
+import { asset } from "@/lib/utils";
 
 const features = [
   {
@@ -32,12 +33,12 @@ export function AboutSection() {
           <Reveal className="relative">
             <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-white/40 shadow-card">
               <video
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/drone-video.mp4`}
+                src={asset("/drone-video.mp4")}
                 autoPlay
                 loop
                 muted
                 playsInline
-                poster={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/drone.png`}
+                poster={asset("/drone.png")}
                 className="w-full h-full object-cover scale-[1.02] transition-transform duration-[20s] ease-linear hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, Phone, Calendar } from "lucide-react";
 import { hospital, navLinks } from "@/lib/constants";
+import { asset } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { MobileMenu } from "./mobile-menu";
 
@@ -17,7 +18,7 @@ export function Navbar() {
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/kify-logo.png"
+              src={asset("/kify-logo.png")}
               alt="Kify Hospital"
               width={120}
               height={48}

@@ -49,8 +49,13 @@ const socials = [
 ];
 
 const RADIUS = 75;
-const START_ANGLE = -150;
-const SPREAD = 120;
+
+const arcPositions = [
+  { x: -72, y: -18 },
+  { x: -60, y: -52 },
+  { x: -32, y: -74 },
+  { x: 6, y: -84 },
+];
 
 export function FloatingSocials() {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,12 +80,7 @@ export function FloatingSocials() {
       <AnimatePresence>
         {isOpen &&
           socials.map((social, index) => {
-            const totalIcons = socials.length;
-            const angleStep = SPREAD / (totalIcons - 1);
-            const angle = START_ANGLE - (index * angleStep);
-            const radian = (angle * Math.PI) / 180;
-            const x = Math.cos(radian) * RADIUS;
-            const y = Math.sin(radian) * RADIUS;
+            const pos = arcPositions[index];
 
             return (
               <motion.a
@@ -89,7 +89,7 @@ export function FloatingSocials() {
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, scale: 0, x: 0, y: 0 }}
-                animate={{ opacity: 1, scale: 1, x, y }}
+                animate={{ opacity: 1, scale: 1, x: pos.x, y: pos.y }}
                 exit={{ opacity: 0, scale: 0, x: 0, y: 0 }}
                 transition={{
                   type: "spring",

@@ -56,7 +56,7 @@ export function PageLoader() {
               className="mb-8 overflow-hidden rounded-3xl shadow-[0_0_60px_rgba(0,86,179,0.3)]"
             >
               <video
-                src="/logo-animation.mp4"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo-animation.mp4`}
                 autoPlay
                 loop
                 muted

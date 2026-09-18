@@ -48,9 +48,9 @@ const socials = [
   },
 ];
 
-const RADIUS = 80;
-const START_ANGLE = -90;
-const SPREAD = 150;
+const RADIUS = 75;
+const START_ANGLE = -150;
+const SPREAD = 120;
 
 export function FloatingSocials() {
   const [isOpen, setIsOpen] = useState(false);
@@ -97,7 +97,7 @@ export function FloatingSocials() {
                   damping: 20,
                   delay: index * 0.06,
                 }}
-                className={`fixed bottom-7 right-7 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br ${social.color} text-white shadow-lg transition-all duration-200 hover:scale-110 hover:shadow-xl active:scale-95`}
+                className={`fixed bottom-20 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br ${social.color} text-white shadow-lg transition-all duration-200 hover:scale-110 hover:shadow-xl active:scale-95`}
                 aria-label={social.label}
               >
                 {social.icon}
@@ -109,7 +109,7 @@ export function FloatingSocials() {
       {/* Trigger Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-7 right-7 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary to-teal text-white shadow-glow"
+        className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary to-teal text-white shadow-glow"
         whileTap={{ scale: 0.9 }}
         aria-label={isOpen ? "Close menu" : "Open social links"}
       >

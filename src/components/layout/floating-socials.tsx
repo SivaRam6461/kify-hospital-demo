@@ -111,6 +111,7 @@ export function FloatingSocials() {
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary to-teal text-white shadow-glow"
         whileTap={{ scale: 0.9 }}
+        suppressHydrationWarning
         aria-label={isOpen ? "Close menu" : "Open social links"}
       >
         {/* Pulse ring when closed */}

@@ -16,7 +16,7 @@ export function Counter({ from = 0, to, suffix = "", duration = 2000, className 
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true });
   const startTime = useRef<number | null>(null);
-  const animationFrame = useRef<number>();
+  const animationFrame = useRef<number>(0);
 
   useEffect(() => {
     if (!isInView) return;
